@@ -63,6 +63,7 @@ export default function Home() {
             className={styles.img}
             height={100}
             width={100}
+            priority="true"
           />
           <h1 className={styles.name}>David Stovelman</h1>
           <p className={styles.role}>Founder</p>
@@ -74,6 +75,7 @@ export default function Home() {
             className={styles.img}
             height={100}
             width={100}
+            priority="true"
           />
           <h1 className={styles.name}>Debbie Stovelman</h1>
           <p className={styles.role}>Founder</p>

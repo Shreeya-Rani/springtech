@@ -1,6 +1,8 @@
 import styles from "../styles/Products.module.css";
 import Image from "next/image";
 import Head from "next/head";
+import ProductCard from "../components/ProductCard";
+import { products as productList } from "../constant";
 
 export default function Products() {
   return (
@@ -10,15 +12,23 @@ export default function Products() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <h1 className={styles.heading}>Our Products</h1>
+
+      <div className={styles.grid}>
+        {productList.map((item, index) => {
+          return <ProductCard item={item} ind={index} key={index} />;
+        })}
+      </div>
+
       <Image
-        src="/product2.png"
+        src="/QRCode.svg"
         alt=""
-        height={350}
-        width={600}
+        height={250}
+        width={250}
         className={styles.image}
-      ></Image>
-      <h1 className={styles.heading}>
-        To view and order more products, download our app now!
+        priority="true"
+      />
+      <h1 className={styles.bottomTxt}>
+        To view and order the products, download the app now!
       </h1>
     </>
   );
